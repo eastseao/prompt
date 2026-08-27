@@ -34,18 +34,6 @@
       "favorite": true,
       "createdAt": 1787796042147,
       "updatedAt": 1787796042147
-    },
-    {
-      "id": "mtavljbosuwo",
-      "title": "测试 Prompt",
-      "content": "你是一个专业的代码审查助手。",
-      "category": "编程",
-      "tags": [
-        "测试"
-      ],
-      "favorite": false,
-      "createdAt": 1787796032532,
-      "updatedAt": 1787796032532
     }
   ]
 }
