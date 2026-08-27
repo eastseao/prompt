@@ -2,10 +2,15 @@
 // 数据文件: prompts.json（存在 eastseao/prompt 仓库 main 分支）
 const http = require("http");
 const { execFile } = require("child_process");
+const crypto = require("crypto");
 const fs = require("fs");
 const path = require("path");
 
 const PORT = 3456;
+const ACCESS_PASSWORD = process.env.PROMPT_PASSWORD || "666888";
+const SESSION_TTL = 7 * 24 * 3600 * 1000; // 7 天免登录
+const sessions = new Map(); // token -> expiresAt
+const loginFails = new Map(); // ip -> { count, until }
 const ROOT = __dirname;
 const OWNER = "eastseao";
 const REPO = "prompt";
@@ -69,9 +74,84 @@ function commitPrefix() {
   return "🌆 晚间更新";
 }
 
+// ---- 访问密码 / 会话 ----
+function parseCookies(req) {
+  const out = {};
+  const raw = req.headers.cookie;
+  if (!raw) return out;
+  raw.split(";").forEach(p => {
+    const i = p.indexOf("=");
+    if (i > -1) out[p.slice(0, i).trim()] = decodeURIComponent(p.slice(i + 1).trim());
+  });
+  return out;
+}
+
+function isAuthed(req) {
+  const token = parseCookies(req).token;
+  if (!token || !sessions.has(token)) return false;
+  if (Date.now() > sessions.get(token)) { sessions.delete(token); return false; }
+  return true;
+}
+
+function unauthorized(res) {
+  res.writeHead(401, { "Content-Type": "application/json; charset=utf-8" });
+  res.end(JSON.stringify({ error: "unauthorized" }));
+}
+
+function clientKey(req) {
+  return (req.headers["cf-connecting-ip"] || req.socket.remoteAddress || "unknown").toString();
+}
+
+async function handleLogin(req, res) {
+  const ip = clientKey(req);
+  const st = loginFails.get(ip);
+  if (st && st.until > Date.now()) {
+    const wait = Math.ceil((st.until - Date.now()) / 1000);
+    res.writeHead(429, { "Content-Type": "application/json; charset=utf-8" });
+    res.end(JSON.stringify({ error: `尝试次数过多，请 ${wait} 秒后再试` }));
+    return;
+  }
+  const p = await readBody(req);
+  if (String(p.password || "") !== ACCESS_PASSWORD) {
+    const cur = st && st.until > Date.now() ? st : { count: 0, until: 0 };
+    cur.count += 1;
+    if (cur.count >= 5) { cur.until = Date.now() + 10 * 60 * 1000; cur.count = 0; } // 锢 10 分钟
+    loginFails.set(ip, cur);
+    res.writeHead(401, { "Content-Type": "application/json; charset=utf-8" });
+    res.end(JSON.stringify({ error: "密码错误" }));
+    return;
+  }
+  loginFails.delete(ip);
+  const token = crypto.randomBytes(32).toString("hex");
+  sessions.set(token, Date.now() + SESSION_TTL);
+  res.writeHead(200, {
+    "Content-Type": "application/json; charset=utf-8",
+    "Set-Cookie": `token=${token}; HttpOnly; Path=/; Max-Age=${Math.floor(SESSION_TTL / 1000)}; SameSite=Lax`,
+  });
+  res.end(JSON.stringify({ ok: true }));
+}
+
 // ---- 简易路由 ----
 const server = http.createServer(async (req, res) => {
   const url = new URL(req.url, `http://localhost:${PORT}`);
+
+  // 登录（免鉴权）
+  if (url.pathname === "/api/login" && req.method === "POST") {
+    try { await handleLogin(req, res); } catch (e) { api500(res, e); }
+    return;
+  }
+
+  // 健康检查（免鉴权，不含敏感信息）
+  if (url.pathname === "/api/health") {
+    res.writeHead(200, { "Content-Type": "application/json; charset=utf-8" });
+    res.end(JSON.stringify({ ok: true, time: new Date().toISOString() }));
+    return;
+  }
+
+  // API 鉴权拦截
+  if (url.pathname.startsWith("/api/") && !isAuthed(req)) {
+    return unauthorized(res);
+  }
 
   // API
   if (url.pathname === "/api/prompts" && req.method === "GET") {
@@ -141,9 +221,14 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  if (url.pathname === "/api/health") {
-    res.writeHead(200, { "Content-Type": "application/json; charset=utf-8" });
-    res.end(JSON.stringify({ ok: true, time: new Date().toISOString() }));
+  if (url.pathname === "/api/logout" && req.method === "POST") {
+    const token = parseCookies(req).token;
+    if (token) sessions.delete(token);
+    res.writeHead(200, {
+      "Content-Type": "application/json; charset=utf-8",
+      "Set-Cookie": "token=; HttpOnly; Path=/; Max-Age=0",
+    });
+    res.end(JSON.stringify({ ok: true }));
     return;
   }
 

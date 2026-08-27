@@ -183,6 +183,28 @@
   #toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
   #toast.err { border-color: var(--red); color: var(--red); }
 
+  /* 登录层 */
+  #loginMask {
+    position: fixed; inset: 0; z-index: 300;
+    background: radial-gradient(ellipse at top, #1a2233 0%, var(--bg) 70%);
+    display: flex; align-items: center; justify-content: center; padding: 20px;
+  }
+  #loginMask.hidden { display: none; }
+  .login-card {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 16px; padding: 32px; width: 100%; max-width: 360px;
+    display: flex; flex-direction: column; gap: 16px; text-align: center;
+  }
+  .login-card .logo { font-size: 28px; justify-content: center; display: flex; }
+  .login-card p { color: var(--muted); font-size: 13px; }
+  .login-card input {
+    width: 100%; padding: 12px 14px; border-radius: 10px;
+    background: var(--bg); border: 1px solid var(--border);
+    color: var(--text); font-size: 16px; outline: none; text-align: center;
+    letter-spacing: 2px;
+  }
+  .login-card input:focus { border-color: var(--accent); }
+
   .loading { text-align: center; color: var(--muted); padding: 60px; grid-column: 1/-1; }
 
   @media (max-width: 600px) {
@@ -265,6 +287,17 @@
 
 <div id="toast"></div>
 
+<!-- 登录层 -->
+<div id="loginMask">
+  <div class="login-card">
+    <div class="logo">✦ Prompt 库</div>
+    <p>私有库，请输入访问密码</p>
+    <input type="password" id="loginPw" placeholder="访问密码" autocomplete="current-password">
+    <button class="btn primary" id="loginBtn" onclick="doLogin()" style="padding:12px;font-size:15px;">进入</button>
+    <p class="hint">🔒 密码错误 5 次将锁定 10 分钟</p>
+  </div>
+</div>
+
 <script>
 let prompts = [];
 let currentViewId = null;
@@ -272,9 +305,56 @@ let editingId = null;
 
 const $ = id => document.getElementById(id);
 
+// ---- 登录 ----
+async function doLogin() {
+  const pw = $('loginPw').value;
+  if (!pw) return toast('请输入密码', true);
+  $('loginBtn').disabled = true;
+  $('loginBtn').textContent = '验证中…';
+  try {
+    const r = await fetch('/api/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password: pw }),
+    });
+    const data = await r.json();
+    if (!r.ok) throw new Error(data.error || '登录失败');
+    enterApp();
+  } catch (e) {
+    toast(e.message, true);
+    $('loginPw').value = '';
+    $('loginPw').focus();
+  } finally {
+    $('loginBtn').disabled = false;
+    $('loginBtn').textContent = '进入';
+  }
+}
+
+function enterApp() {
+  $('loginMask').classList.add('hidden');
+  load();
+}
+
+async function checkAuth() {
+  try {
+    const r = await fetch('/api/prompts');
+    if (r.ok) { enterApp(); return; }
+    if (r.status === 401) {
+      $('loginMask').classList.remove('hidden');
+      setTimeout(() => $('loginPw').focus(), 50);
+    }
+  } catch (e) {
+    $('grid').innerHTML = `<div class="empty"><div class="big">⚠️</div>连接失败</div>`;
+  }
+}
+
 async function load() {
   try {
     const r = await fetch('/api/prompts');
+    if (r.status === 401) {
+      $('loginMask').classList.remove('hidden');
+      return;
+    }
     const data = await r.json();
     prompts = data.prompts || [];
     render();
@@ -474,6 +554,7 @@ function toast(msg, isErr) {
 
 $('search').addEventListener('input', render);
 $('sortBy').addEventListener('change', render);
+$('loginPw').addEventListener('keydown', e => { if (e.key === 'Enter') doLogin(); });
 $('editMask').addEventListener('click', e => { if (e.target === $('editMask')) closeEditor(); });
 $('viewMask').addEventListener('click', e => { if (e.target === $('viewMask')) closeView(); });
 document.addEventListener('keydown', e => {
@@ -481,7 +562,7 @@ document.addEventListener('keydown', e => {
   if (e.ctrlKey && e.key === 'Enter' && $('editMask').classList.contains('show')) savePrompt();
 });
 
-load();
+checkAuth();
 </script>
 </body>
 </html>
