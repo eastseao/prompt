@@ -46,6 +46,1642 @@
       "favorite": false,
       "createdAt": 1787796032532,
       "updatedAt": 1787796032532
+    },
+    {
+      "id": "mtmtavu59b00",
+      "title": "PPT大纲生成",
+      "content": "围绕【主题名称】生成一份 PPT 完整大纲，划分 8-12 页内容，每一页标注页面主题与核心要点。",
+      "category": "办公",
+      "tags": [
+        "PPT",
+        "大纲"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434208,
+      "updatedAt": 1787796434208
+    },
+    {
+      "id": "mtmtavu59c00",
+      "title": "书面汇报文案改写",
+      "content": "改写文案适配书面汇报，正式严谨、逻辑递进、无口语化表述。",
+      "category": "办公",
+      "tags": [
+        "书面汇报"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434209,
+      "updatedAt": 1787796434209
+    },
+    {
+      "id": "mtmtavu59d00",
+      "title": "会议纪要整理",
+      "content": "基于上传的会议原始记录，整理结构化会议纪要，提取参会人员、会议议题、达成结论、待办事项以及对应责任人，条理清晰。",
+      "category": "办公",
+      "tags": [
+        "会议",
+        "纪要"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434210,
+      "updatedAt": 1787796434210
+    },
+    {
+      "id": "mtmtavu59e00",
+      "title": "会议结束群通知",
+      "content": "整理会议结束群通知，提炼会议重点、落地任务、执行节点，简洁清晰，适合全员查看。",
+      "category": "办公",
+      "tags": [
+        "会议",
+        "群通知"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434211,
+      "updatedAt": 1787796434211
+    },
+    {
+      "id": "mtmtavu59f00",
+      "title": "全文精简压缩",
+      "content": "精简全文内容，压缩冗余表述，保留100%核心信息，字数缩减50%，逻辑不变、重点不丢，简洁干练。",
+      "category": "办公",
+      "tags": [
+        "精简",
+        "压缩"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434212,
+      "updatedAt": 1787796434212
+    },
+    {
+      "id": "mtmtavu59g00",
+      "title": "全文语句优化润色",
+      "content": "优化全文语句，修正语病、口语化表述，精简冗余文字，保留核心信息，逻辑通顺、语句流畅，适配职场正式场景。",
+      "category": "办公",
+      "tags": [
+        "润色",
+        "语句优化"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434213,
+      "updatedAt": 1787796434213
+    },
+    {
+      "id": "mtmtavu59h00",
+      "title": "加班工作说明",
+      "content": "撰写加班工作说明，客观记录工作内容、加班时长、工作成果，简洁正式。",
+      "category": "办公",
+      "tags": [
+        "加班"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434214,
+      "updatedAt": 1787796434214
+    },
+    {
+      "id": "mtmtavu59i00",
+      "title": "口头汇报文案改写",
+      "content": "帮我改写这段文字，适配口头汇报，自然流畅、重点突出、不书面、不生硬。",
+      "category": "办公",
+      "tags": [
+        "口头汇报"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434215,
+      "updatedAt": 1787796434215
+    },
+    {
+      "id": "mtmtavu59j00",
+      "title": "周报自动生成",
+      "content": "根据我上传的本周工作记录，生成一份标准工作周报，分为本周完成工作、遇到的问题、下周工作计划三个部分，语言正式简洁，输出 Markdown 格式。",
+      "category": "办公",
+      "tags": [
+        "周报",
+        "复盘",
+        "高频"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434216,
+      "updatedAt": 1787796434216
+    },
+    {
+      "id": "mtmtavu59k00",
+      "title": "多份文档批量统一格式",
+      "content": "批量统一多份文档格式，统一字号、对齐方式、段落间距，剔除无效内容，合并为一份完整归档文档。",
+      "category": "办公",
+      "tags": [
+        "批量",
+        "归档"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434217,
+      "updatedAt": 1787796434217
+    },
+    {
+      "id": "mtmtavu59l00",
+      "title": "官方通知转话术",
+      "content": "把冗长的官方通知，转化为通俗易懂的职场话术，提炼重点，适合转发部门工作群。",
+      "category": "办公",
+      "tags": [
+        "通知",
+        "话术"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434218,
+      "updatedAt": 1787796434218
+    },
+    {
+      "id": "mtmtavu59m00",
+      "title": "对外沟通文案优化",
+      "content": "优化我的对外沟通文案，专业严谨、逻辑清晰，适配商务对接、客户沟通场景。",
+      "category": "办公",
+      "tags": [
+        "对外",
+        "商务"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434219,
+      "updatedAt": 1787796434219
+    },
+    {
+      "id": "mtmtavu59n00",
+      "title": "岗位工作交接说明",
+      "content": "写一份岗位工作交接说明，条理清晰、分模块罗列工作内容、资料位置、对接事项、注意要点。",
+      "category": "办公",
+      "tags": [
+        "交接"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434220,
+      "updatedAt": 1787796434220
+    },
+    {
+      "id": "mtmtavu59o00",
+      "title": "工作内容丰富拔高",
+      "content": "丰富工作内容表述，润色优化、拔高格局、突出价值，适配正式述职汇报。",
+      "category": "办公",
+      "tags": [
+        "述职",
+        "拔高"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434221,
+      "updatedAt": 1787796434221
+    },
+    {
+      "id": "mtmtavu59p00",
+      "title": "工作对接话术",
+      "content": "撰写工作对接话术，礼貌专业、清晰说明需求、明确对接要求，避免反复沟通。",
+      "category": "办公",
+      "tags": [
+        "对接",
+        "话术"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434222,
+      "updatedAt": 1787796434222
+    },
+    {
+      "id": "mtmtavu59q00",
+      "title": "工作延迟说明",
+      "content": "写一份工作延迟说明，客观说明延迟原因、当前进度、整改措施、新完成时间，诚恳得体。",
+      "category": "办公",
+      "tags": [
+        "延期",
+        "说明"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434223,
+      "updatedAt": 1787796434223
+    },
+    {
+      "id": "mtmtavu59r00",
+      "title": "工作感谢话术",
+      "content": "写一份工作感谢话术，感谢同事协助，真诚不油腻，适合工作群公开致谢。",
+      "category": "办公",
+      "tags": [
+        "感谢"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434224,
+      "updatedAt": 1787796434224
+    },
+    {
+      "id": "mtmtavu59s00",
+      "title": "工作汇报精简",
+      "content": "精简工作汇报内容，保留核心成果，删除铺垫话术，适配短时间述职场景。",
+      "category": "办公",
+      "tags": [
+        "精简",
+        "述职"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434225,
+      "updatedAt": 1787796434225
+    },
+    {
+      "id": "mtmtavu59t00",
+      "title": "工作汇报邮件",
+      "content": "帮我写一封职场工作汇报邮件，主题清晰、内容简洁，包含工作进度、当前成果、待解决问题、后续计划，正式得体。",
+      "category": "办公",
+      "tags": [
+        "邮件",
+        "汇报"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434226,
+      "updatedAt": 1787796434226
+    },
+    {
+      "id": "mtmtavu59u00",
+      "title": "干货清单整理",
+      "content": "梳理这份文档核心要点，分点总结关键信息，做成一目了然的干货清单，适合快速学习、工作复盘。",
+      "category": "办公",
+      "tags": [
+        "清单",
+        "干货"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434227,
+      "updatedAt": 1787796434227
+    },
+    {
+      "id": "mtmtavu59v00",
+      "title": "待办任务提取清单",
+      "content": "提取文档中的待办任务、责任人、截止时间，单独整理成清晰任务清单，方便落地执行。",
+      "category": "办公",
+      "tags": [
+        "待办",
+        "任务清单"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434228,
+      "updatedAt": 1787796434228
+    },
+    {
+      "id": "mtmtavu59w00",
+      "title": "文档排版统一规范",
+      "content": "读取我上传的文档，统一全文字体、行距、标题层级，删除冗余空行、重复内容，规整排版，输出整洁规范的正式文档。",
+      "category": "办公",
+      "tags": [
+        "排版",
+        "文档整理"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434229,
+      "updatedAt": 1787796434229
+    },
+    {
+      "id": "mtmtavu59x00",
+      "title": "新人入职欢迎话术",
+      "content": "写一份新人入职欢迎话术，温暖正式，简洁介绍团队氛围、基础工作要求。",
+      "category": "办公",
+      "tags": [
+        "入职",
+        "欢迎"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434230,
+      "updatedAt": 1787796434230
+    },
+    {
+      "id": "mtmtavu59y00",
+      "title": "月度工作同步通知",
+      "content": "撰写月度工作同步通知，同步部门整体工作进度、核心成果、下月重点规划。",
+      "category": "办公",
+      "tags": [
+        "月度",
+        "同步"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434231,
+      "updatedAt": 1787796434231
+    },
+    {
+      "id": "mtmtavu59z00",
+      "title": "沟通话术优化",
+      "content": "优化我的沟通话术，弱化生硬感，委婉专业、不卑不亢，适配职场上下级、同事对接场景。",
+      "category": "办公",
+      "tags": [
+        "沟通",
+        "优化"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434232,
+      "updatedAt": 1787796434232
+    },
+    {
+      "id": "mtmtavu5a000",
+      "title": "活动结束总结通知",
+      "content": "写一份活动结束总结通知，简要说明活动成果、亮点、不足、后续收尾工作。",
+      "category": "办公",
+      "tags": [
+        "活动",
+        "总结"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434233,
+      "updatedAt": 1787796434233
+    },
+    {
+      "id": "mtmtavu5a100",
+      "title": "纯文字结构化条目化",
+      "content": "将这份纯文字文档，梳理为结构化条目形式，分点罗列清晰，条理分明，方便快速阅读查阅。",
+      "category": "办公",
+      "tags": [
+        "结构化",
+        "条目"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434234,
+      "updatedAt": 1787796434234
+    },
+    {
+      "id": "mtmtavu5a200",
+      "title": "请假申请撰写",
+      "content": "帮我写请假申请，理由合理、表述简洁、态度诚恳，符合职场规范，直接复制提交即可。",
+      "category": "办公",
+      "tags": [
+        "请假"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434235,
+      "updatedAt": 1787796434235
+    },
+    {
+      "id": "mtmtavu5a300",
+      "title": "邮件文案改写润色",
+      "content": "帮我改写下面这段文字，调整为正式商务邮件语气，逻辑通顺，精简冗余表述，保留全部核心信息。【粘贴你的原文】",
+      "category": "办公",
+      "tags": [
+        "邮件",
+        "润色"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434236,
+      "updatedAt": 1787796434236
+    },
+    {
+      "id": "mtmtavu5a400",
+      "title": "部门工作通知",
+      "content": "撰写部门工作通知，语气正式严谨，明确工作要求、执行时间、对接人员、注意事项，结构清晰无遗漏。",
+      "category": "办公",
+      "tags": [
+        "通知"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434237,
+      "updatedAt": 1787796434237
+    },
+    {
+      "id": "mtmtavu5a500",
+      "title": "长文摘要提炼",
+      "content": "读取上传的长文/会议内容，提炼300字以内核心摘要，保留关键结论、核心工作、重点要求，剔除所有无效废话。",
+      "category": "办公",
+      "tags": [
+        "摘要",
+        "提炼"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434238,
+      "updatedAt": 1787796434238
+    },
+    {
+      "id": "mtmtavu5a600",
+      "title": "长文档分段加标题",
+      "content": "给这份长文档自动分段、添加小标题，重点内容加粗高亮，梳理全文逻辑，提升可读性，适合对内汇报使用。",
+      "category": "办公",
+      "tags": [
+        "长文档",
+        "分段",
+        "汇报"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434239,
+      "updatedAt": 1787796434239
+    },
+    {
+      "id": "mtmtavu5a700",
+      "title": "零散工作结构化输出",
+      "content": "整理零散工作内容，结构化输出，条理清晰、层级分明，适配归档汇报。",
+      "category": "办公",
+      "tags": [
+        "结构化",
+        "归档"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434240,
+      "updatedAt": 1787796434240
+    },
+    {
+      "id": "mtmtavu5a800",
+      "title": "需求文档简易编写",
+      "content": "帮我编写一份简易产品需求文档，包含背景说明、功能目标、用户角色、核心功能清单、非功能需求，输出 Markdown 文档。",
+      "category": "办公",
+      "tags": [
+        "需求文档",
+        "PRD"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434241,
+      "updatedAt": 1787796434241
+    },
+    {
+      "id": "mtmtavu5a900",
+      "title": "项目启动通知",
+      "content": "撰写项目启动通知，明确项目背景、核心目标、分工安排、时间排期、注意事项。",
+      "category": "办公",
+      "tags": [
+        "项目",
+        "启动"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434242,
+      "updatedAt": 1787796434242
+    },
+    {
+      "id": "mtmtavu5aa00",
+      "title": "3分钟简短述职",
+      "content": "帮我写3分钟简短述职报告，精简干练、突出核心业绩、弱化不足，适配口头述职场景。",
+      "category": "汇报",
+      "tags": [
+        "述职",
+        "简短"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434243,
+      "updatedAt": 1787796434243
+    },
+    {
+      "id": "mtmtavu5ab00",
+      "title": "会议决议整理",
+      "content": "整理会议决议内容，提炼核心工作安排，明确负责人、截止时间、验收标准。",
+      "category": "汇报",
+      "tags": [
+        "会议",
+        "决议"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434244,
+      "updatedAt": 1787796434244
+    },
+    {
+      "id": "mtmtavu5ac00",
+      "title": "周月报标准撰写",
+      "content": "根据我上传的工作素材，撰写标准周/月报，分为工作成果、数据复盘、问题总结、下周计划四大板块，无流水账、突出量化成果。",
+      "category": "汇报",
+      "tags": [
+        "周报",
+        "月报",
+        "量化"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434245,
+      "updatedAt": 1787796434245
+    },
+    {
+      "id": "mtmtavu5ad00",
+      "title": "团队工作总结",
+      "content": "撰写团队工作总结，整体复盘团队成果、协作亮点、现存不足、后续团队优化方向。",
+      "category": "汇报",
+      "tags": [
+        "团队"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434246,
+      "updatedAt": 1787796434246
+    },
+    {
+      "id": "mtmtavu5ae00",
+      "title": "复盘内容拔高",
+      "content": "优化我的复盘内容，拔高思考深度、跳出流水账，突出个人思考、工作价值与成长。",
+      "category": "汇报",
+      "tags": [
+        "拔高",
+        "思考"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434247,
+      "updatedAt": 1787796434247
+    },
+    {
+      "id": "mtmtavu5af00",
+      "title": "工作亮点总结",
+      "content": "撰写工作亮点总结，提炼核心业绩、突出工作价值、量化成果、展现个人能力。",
+      "category": "汇报",
+      "tags": [
+        "亮点"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434248,
+      "updatedAt": 1787796434248
+    },
+    {
+      "id": "mtmtavu5ag00",
+      "title": "工作总结感悟",
+      "content": "撰写工作总结感悟，结合工作实际，总结成长收获、反思不足、规划后续提升方向。",
+      "category": "汇报",
+      "tags": [
+        "感悟"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434249,
+      "updatedAt": 1787796434249
+    },
+    {
+      "id": "mtmtavu5ah00",
+      "title": "工作流程SOP梳理",
+      "content": "梳理工作流程，优化繁琐环节、梳理标准化流程，输出可复用的工作SOP。",
+      "category": "汇报",
+      "tags": [
+        "SOP",
+        "流程"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434250,
+      "updatedAt": 1787796434250
+    },
+    {
+      "id": "mtmtavu5ai00",
+      "title": "工作计划撰写",
+      "content": "撰写工作计划，分阶段、分模块明确工作内容、执行节点、核心目标，落地性强。",
+      "category": "汇报",
+      "tags": [
+        "计划"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434251,
+      "updatedAt": 1787796434251
+    },
+    {
+      "id": "mtmtavu5aj00",
+      "title": "工作问题系统复盘",
+      "content": "梳理工作问题，系统性总结问题根源、影响范围、整改措施、预防机制，形成完整问题复盘。",
+      "category": "汇报",
+      "tags": [
+        "问题",
+        "复盘"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434252,
+      "updatedAt": 1787796434252
+    },
+    {
+      "id": "mtmtavu5ak00",
+      "title": "年度工作总结",
+      "content": "写一份年度工作总结，结构完整、重点突出、量化成果、复盘问题、规划来年工作，适配正式述职。",
+      "category": "汇报",
+      "tags": [
+        "年度",
+        "述职"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434253,
+      "updatedAt": 1787796434253
+    },
+    {
+      "id": "mtmtavu5al00",
+      "title": "方案逻辑优化",
+      "content": "优化方案逻辑，梳理层级结构、补充缺失环节、完善落地细节，让方案更完整可执行。",
+      "category": "汇报",
+      "tags": [
+        "方案",
+        "优化"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434254,
+      "updatedAt": 1787796434254
+    },
+    {
+      "id": "mtmtavu5am00",
+      "title": "月度工作复盘",
+      "content": "撰写月度工作复盘，客观总结亮点与不足，深度分析问题成因，给出落地整改方案和后续优化计划。",
+      "category": "汇报",
+      "tags": [
+        "复盘",
+        "月度"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434255,
+      "updatedAt": 1787796434255
+    },
+    {
+      "id": "mtmtavu5an00",
+      "title": "汇报话术优化",
+      "content": "优化汇报话术，重点前置、逻辑清晰、简洁有力，适配领导汇报、述职场景。",
+      "category": "汇报",
+      "tags": [
+        "话术",
+        "领导"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434256,
+      "updatedAt": 1787796434256
+    },
+    {
+      "id": "mtmtavu5ao00",
+      "title": "活动策划方案",
+      "content": "撰写活动策划方案，包含活动背景、核心目标、受众人群、流程排期、推广渠道、预算拆分、风险预案。",
+      "category": "汇报",
+      "tags": [
+        "活动",
+        "策划"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434257,
+      "updatedAt": 1787796434257
+    },
+    {
+      "id": "mtmtavu5ap00",
+      "title": "落地执行细则",
+      "content": "撰写落地执行细则，把宏观方案拆解为分步可执行动作，明确标准和节点。",
+      "category": "汇报",
+      "tags": [
+        "执行",
+        "SOP"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434258,
+      "updatedAt": 1787796434258
+    },
+    {
+      "id": "mtmtavu5aq00",
+      "title": "阶段性工作汇报",
+      "content": "写一份阶段性工作汇报，同步工作进度、已完成内容、进行中工作、待支持事项、后续规划。",
+      "category": "汇报",
+      "tags": [
+        "阶段",
+        "汇报"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434259,
+      "updatedAt": 1787796434259
+    },
+    {
+      "id": "mtmtavu5ar00",
+      "title": "项目复盘报告",
+      "content": "撰写项目复盘报告，从项目背景、执行过程、核心成果、现存漏洞、经验总结、后续优化全维度梳理。",
+      "category": "汇报",
+      "tags": [
+        "项目",
+        "复盘"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434260,
+      "updatedAt": 1787796434260
+    },
+    {
+      "id": "mtmtavu5as00",
+      "title": "项目成果总结",
+      "content": "撰写项目成果总结，量化数据、突出价值、展示落地效果，适配评优、汇报、归档。",
+      "category": "汇报",
+      "tags": [
+        "成果",
+        "评优"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434261,
+      "updatedAt": 1787796434261
+    },
+    {
+      "id": "mtmtavu5at00",
+      "title": "风险评估报告",
+      "content": "撰写风险评估报告，梳理项目潜在风险、分析影响程度、给出对应应对预案。",
+      "category": "汇报",
+      "tags": [
+        "风险"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434262,
+      "updatedAt": 1787796434262
+    },
+    {
+      "id": "mtmtavu5au00",
+      "title": "Skill插件配置调试",
+      "content": "帮我配置当前已安装的【Skill 名称】，说明关键参数含义，给出适合个人使用的参数配置，排查常见报错。",
+      "category": "效率",
+      "tags": [
+        "Skill",
+        "调试",
+        "配置"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434263,
+      "updatedAt": 1787796434263
+    },
+    {
+      "id": "mtmtavu5av00",
+      "title": "信息对比分析",
+      "content": "针对 A、B 两个方案，制作对比表格，从优势、劣势、适用场景、风险点四个维度进行对比，最后给出客观建议。",
+      "category": "效率",
+      "tags": [
+        "对比",
+        "分析"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434264,
+      "updatedAt": 1787796434264
+    },
+    {
+      "id": "mtmtavu5aw00",
+      "title": "工作台组件配置指令",
+      "content": "帮我搭建学生个人工作台，添加待办清单、日历时间、笔记模块、网课链接收藏、学习进度组件，使用两栏布局，风格简约。",
+      "category": "效率",
+      "tags": [
+        "工作台",
+        "搭建"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434265,
+      "updatedAt": 1787796434265
+    },
+    {
+      "id": "mtmtavu5ax00",
+      "title": "待办任务拆解",
+      "content": "把【目标任务】拆解成可落地的分步执行清单，区分优先级，标注简单时间参考，输出任务列表。",
+      "category": "效率",
+      "tags": [
+        "任务",
+        "拆解",
+        "TODO"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434266,
+      "updatedAt": 1787796434266
+    },
+    {
+      "id": "mtmtavu5ay00",
+      "title": "Excel公式编写教程",
+      "content": "帮我编写Excel实用公式，实现【求和/匹配/筛选/统计】功能，附带公式解析和使用教程。",
+      "category": "数据文件",
+      "tags": [
+        "Excel",
+        "公式"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434267,
+      "updatedAt": 1787796434267
+    },
+    {
+      "id": "mtmtavu5az00",
+      "title": "Excel数据清洗整理",
+      "content": "读取我上传的Excel表格，完成数据清洗，剔除无效、重复、空白数据，标注异常数据，规整表格格式。",
+      "category": "数据文件",
+      "tags": [
+        "Excel",
+        "清洗"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434268,
+      "updatedAt": 1787796434268
+    },
+    {
+      "id": "mtmtavu5b000",
+      "title": "Excel表格数据清洗",
+      "content": "处理这份上传的表格，去除重复数据，统一格式，整理成规范表格，增加简单统计汇总行，导出可下载文件。",
+      "category": "数据文件",
+      "tags": [
+        "Excel",
+        "数据清洗"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434269,
+      "updatedAt": 1787796434269
+    },
+    {
+      "id": "mtmtavu5b100",
+      "title": "PDF文档结构化提炼",
+      "content": "解析上传的PDF文件，提炼全文核心内容，分模块总结重点，输出结构化文档。",
+      "category": "数据文件",
+      "tags": [
+        "PDF"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434270,
+      "updatedAt": 1787796434270
+    },
+    {
+      "id": "mtmtavu5b200",
+      "title": "会议录音转写整理",
+      "content": "解析会议录音转文字素材，剔除无效闲聊，整理结构化会议纪要，标注待办任务。",
+      "category": "数据文件",
+      "tags": [
+        "会议",
+        "录音"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434271,
+      "updatedAt": 1787796434271
+    },
+    {
+      "id": "mtmtavu5b300",
+      "title": "多文件命名规范",
+      "content": "统一多份文件命名格式，按照【日期+内容+版本】规范重命名，方便文件管理。",
+      "category": "数据文件",
+      "tags": [
+        "命名"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434272,
+      "updatedAt": 1787796434272
+    },
+    {
+      "id": "mtmtavu5b400",
+      "title": "多文档批量整合",
+      "content": "批量读取多份文档，去重整合、统一格式、梳理逻辑，合并为一份完整归档文件。",
+      "category": "数据文件",
+      "tags": [
+        "批量",
+        "整合"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434273,
+      "updatedAt": 1787796434273
+    },
+    {
+      "id": "mtmtavu5b500",
+      "title": "数据分析报告生成",
+      "content": "根据表格数据，生成简洁直观的数据分析报告，包含数据概况、变化趋势、问题总结、优化方案。",
+      "category": "数据文件",
+      "tags": [
+        "报告"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434274,
+      "updatedAt": 1787796434274
+    },
+    {
+      "id": "mtmtavu5b600",
+      "title": "数据可视化结论",
+      "content": "根据现有数据，生成可视化分析结论，通俗易懂，适配汇报复盘场景。",
+      "category": "数据文件",
+      "tags": [
+        "可视化"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434275,
+      "updatedAt": 1787796434275
+    },
+    {
+      "id": "mtmtavu5b700",
+      "title": "数据台账整合",
+      "content": "整合零散数据，梳理成完整数据台账，条理清晰、规范统一、可长期复用。",
+      "category": "数据文件",
+      "tags": [
+        "台账"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434276,
+      "updatedAt": 1787796434276
+    },
+    {
+      "id": "mtmtavu5b800",
+      "title": "数据问题诊断与建议",
+      "content": "分析表格数据，找出数据下滑/上涨核心原因，梳理现存问题，给出3-5条可落地优化建议。",
+      "category": "数据文件",
+      "tags": [
+        "诊断",
+        "优化建议"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434277,
+      "updatedAt": 1787796434277
+    },
+    {
+      "id": "mtmtavu5b900",
+      "title": "文档去冗纯净版",
+      "content": "清理文档冗余水印、无效标注、重复段落，输出纯净版正式文档。",
+      "category": "数据文件",
+      "tags": [
+        "清理"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434278,
+      "updatedAt": 1787796434278
+    },
+    {
+      "id": "mtmtavu5ba00",
+      "title": "文档批量翻译",
+      "content": "批量翻译文档内容，精准专业、语句通顺，保留原文格式和排版结构。",
+      "category": "数据文件",
+      "tags": [
+        "翻译",
+        "批量"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434279,
+      "updatedAt": 1787796434279
+    },
+    {
+      "id": "mtmtavu5bb00",
+      "title": "文档数据清单提取",
+      "content": "提取文档中所有关键数据、核心指标，单独整理成数据清单，一目了然。",
+      "category": "数据文件",
+      "tags": [
+        "数据",
+        "清单"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434280,
+      "updatedAt": 1787796434280
+    },
+    {
+      "id": "mtmtavu5bc00",
+      "title": "杂乱表格规范整理",
+      "content": "规整杂乱表格，统一列名、清理空白行列、修正错误数据，排版整洁规范，可直接归档。",
+      "category": "数据文件",
+      "tags": [
+        "规范"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434281,
+      "updatedAt": 1787796434281
+    },
+    {
+      "id": "mtmtavu5bd00",
+      "title": "表格差异对比",
+      "content": "对比两份表格数据，找出差异内容、重复内容、缺失内容，高亮标注差异点，输出对比结果。",
+      "category": "数据文件",
+      "tags": [
+        "对比",
+        "差异"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434282,
+      "updatedAt": 1787796434282
+    },
+    {
+      "id": "mtmtavu5be00",
+      "title": "表格数据单位统一",
+      "content": "修正表格数据错误、格式错乱问题，统一数据单位、规范数值展示。",
+      "category": "数据文件",
+      "tags": [
+        "单位",
+        "规范"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434283,
+      "updatedAt": 1787796434283
+    },
+    {
+      "id": "mtmtavu5bf00",
+      "title": "表格数据多维统计",
+      "content": "对表格数据进行多维度统计，计算总和、平均值、最大值、最小值，梳理数据变化规律，输出统计结果。",
+      "category": "数据文件",
+      "tags": [
+        "统计",
+        "分析"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434284,
+      "updatedAt": 1787796434284
+    },
+    {
+      "id": "mtmtavu5bg00",
+      "title": "长文档自动拆分",
+      "content": "拆分长文档，按章节、模块自动拆分多个独立文件，分类命名、规整归档。",
+      "category": "数据文件",
+      "tags": [
+        "拆分"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434285,
+      "updatedAt": 1787796434285
+    },
+    {
+      "id": "mtmtavu5bh00",
+      "title": "长文转Excel表格",
+      "content": "将长篇文字内容，整理为规范Excel表格，分类罗列信息，清晰直观、方便查阅。",
+      "category": "数据文件",
+      "tags": [
+        "Excel",
+        "转换"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434286,
+      "updatedAt": 1787796434286
+    },
+    {
+      "id": "mtmtavu5bi00",
+      "title": "项目资料总览",
+      "content": "梳理项目资料，分类归档、总结核心内容，生成项目资料总览文档。",
+      "category": "数据文件",
+      "tags": [
+        "项目",
+        "归档"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434287,
+      "updatedAt": 1787796434287
+    },
+    {
+      "id": "mtmtavu5bj00",
+      "title": "一周学习计划",
+      "content": "帮我制定一周学习计划，结合我的目标和空余时间，合理分配任务、劳逸结合、落地可行。",
+      "category": "学习",
+      "tags": [
+        "计划",
+        "学习"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434288,
+      "updatedAt": 1787796434288
+    },
+    {
+      "id": "mtmtavu5bk00",
+      "title": "专业内容精准翻译",
+      "content": "帮我翻译这段专业内容，精准专业、语句通顺，贴合行业术语，保留原文核心含义。",
+      "category": "学习",
+      "tags": [
+        "翻译",
+        "专业"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434289,
+      "updatedAt": 1787796434289
+    },
+    {
+      "id": "mtmtavu5bl00",
+      "title": "优秀案例拆解学习",
+      "content": "拆解优秀案例，分析亮点、可复用经验、优化空间，输出个人学习总结。",
+      "category": "学习",
+      "tags": [
+        "拆解",
+        "案例"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434290,
+      "updatedAt": 1787796434290
+    },
+    {
+      "id": "mtmtavu5bm00",
+      "title": "学习资料要点提炼",
+      "content": "阅读上传的学习文档，提炼核心知识点，分点整理，剔除冗余描述，做成便于复习的笔记。",
+      "category": "学习",
+      "tags": [
+        "学习",
+        "笔记",
+        "要点"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434291,
+      "updatedAt": 1787796434291
+    },
+    {
+      "id": "mtmtavu5bn00",
+      "title": "年度个人总结",
+      "content": "帮我梳理年度个人总结，复盘成长、不足、收获，规划来年个人提升目标。",
+      "category": "学习",
+      "tags": [
+        "年度",
+        "个人"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434292,
+      "updatedAt": 1787796434292
+    },
+    {
+      "id": "mtmtavu5bo00",
+      "title": "思维导图大纲输出",
+      "content": "基于上传文档，梳理知识框架，输出思维导图文本大纲，层级分明。",
+      "category": "学习",
+      "tags": [
+        "思维导图",
+        "大纲"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434293,
+      "updatedAt": 1787796434293
+    },
+    {
+      "id": "mtmtavu5bp00",
+      "title": "思维导图框架整理",
+      "content": "根据学习内容，整理思维导图框架，梳理知识体系、逻辑清晰、方便记忆复盘。",
+      "category": "学习",
+      "tags": [
+        "思维导图"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434294,
+      "updatedAt": 1787796434294
+    },
+    {
+      "id": "mtmtavu5bq00",
+      "title": "模拟面试问答",
+      "content": "模拟面试问答，针对【岗位】整理高频面试题+标准答案，专业贴合职场招聘需求。",
+      "category": "学习",
+      "tags": [
+        "面试"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434295,
+      "updatedAt": 1787796434295
+    },
+    {
+      "id": "mtmtavu5br00",
+      "title": "知识点出题自测",
+      "content": "根据这份学习材料，出 10 道自测练习题，包含单选、多选、简答题，末尾附上参考答案。",
+      "category": "学习",
+      "tags": [
+        "学习",
+        "出题",
+        "测试"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434296,
+      "updatedAt": 1787796434296
+    },
+    {
+      "id": "mtmtavu5bs00",
+      "title": "知识点通俗讲解",
+      "content": "帮我拆解【知识点】，用通俗大白话讲解，分点梳理核心、重点、易错点，零基础轻松看懂。",
+      "category": "学习",
+      "tags": [
+        "知识点",
+        "通俗"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434297,
+      "updatedAt": 1787796434297
+    },
+    {
+      "id": "mtmtavu5bt00",
+      "title": "简历优化",
+      "content": "帮我优化简历，结合目标岗位，突出匹配优势、量化工作成果、精简冗余内容，提升通过率。",
+      "category": "学习",
+      "tags": [
+        "简历",
+        "求职"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434298,
+      "updatedAt": 1787796434298
+    },
+    {
+      "id": "mtmtavu5bu00",
+      "title": "自律作息计划",
+      "content": "制定自律作息计划，结合我的生活习惯，科学合理、可长期坚持，兼顾工作与生活。",
+      "category": "学习",
+      "tags": [
+        "作息",
+        "自律"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434299,
+      "updatedAt": 1787796434299
+    },
+    {
+      "id": "mtmtavu5bv00",
+      "title": "长文本翻译",
+      "content": "将下面内容翻译成通顺中文，专业术语尽量准确，保留原文段落结构。【粘贴外文内容】",
+      "category": "学习",
+      "tags": [
+        "翻译"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434300,
+      "updatedAt": 1787796434300
+    },
+    {
+      "id": "mtmtavu5bw00",
+      "title": "阅读笔记整理",
+      "content": "整理阅读笔记，提炼书籍核心观点、金句、干货内容、个人感悟，结构化输出。",
+      "category": "学习",
+      "tags": [
+        "阅读",
+        "笔记"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434301,
+      "updatedAt": 1787796434301
+    },
+    {
+      "id": "mtmtavu5bx00",
+      "title": "产品测评文案",
+      "content": "生成产品测评文案，客观真实、优缺点分明，不夸大、不硬吹，贴合用户真实体验。",
+      "category": "写作",
+      "tags": [
+        "测评"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434302,
+      "updatedAt": 1787796434302
+    },
+    {
+      "id": "mtmtavu5by00",
+      "title": "公众号文章开头生成",
+      "content": "生成3组公众号文章开头，悬念吸睛、直击用户痛点，杜绝平淡铺垫，提升点击率。",
+      "category": "写作",
+      "tags": [
+        "公众号",
+        "开头"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434303,
+      "updatedAt": 1787796434303
+    },
+    {
+      "id": "mtmtavu5bz00",
+      "title": "小白用户文案改写",
+      "content": "改写文案适配小白用户，去掉专业术语、通俗直白、简单易懂，零基础也能看懂。",
+      "category": "写作",
+      "tags": [
+        "小白",
+        "通俗"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434304,
+      "updatedAt": 1787796434304
+    },
+    {
+      "id": "mtmtavu5c000",
+      "title": "小红书爆款标题生成",
+      "content": "根据产品核心卖点【填写卖点】，生成5组小红书爆款标题，包含数字、悬念、痛点，吸引力强、适配算法推荐。",
+      "category": "写作",
+      "tags": [
+        "小红书",
+        "标题",
+        "爆款"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434305,
+      "updatedAt": 1787796434305
+    },
+    {
+      "id": "mtmtavu5c100",
+      "title": "小红书种草笔记",
+      "content": "帮我写一篇小红书种草笔记，真实生活化、无硬广感，开头抓眼球，中间讲细节，结尾引导收藏互动，适配【对应赛道】。",
+      "category": "写作",
+      "tags": [
+        "小红书",
+        "种草"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434306,
+      "updatedAt": 1787796434306
+    },
+    {
+      "id": "mtmtavu5c200",
+      "title": "差异化文案批量改写",
+      "content": "批量改写10条差异化文案，保留核心卖点，每条角度不同、不重复，适合持续更新发稿。",
+      "category": "写作",
+      "tags": [
+        "批量",
+        "差异化"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434307,
+      "updatedAt": 1787796434307
+    },
+    {
+      "id": "mtmtavu5c300",
+      "title": "干货清单类文案",
+      "content": "生成干货清单类文案，分点清晰、条理分明，用户可直接收藏复用。",
+      "category": "写作",
+      "tags": [
+        "清单"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434308,
+      "updatedAt": 1787796434308
+    },
+    {
+      "id": "mtmtavu5c400",
+      "title": "干货科普笔记",
+      "content": "帮我写一篇干货科普笔记，结构清晰、内容实用、可收藏，适配新手用户，通俗易懂无门槛。",
+      "category": "写作",
+      "tags": [
+        "科普",
+        "干货"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434309,
+      "updatedAt": 1787796434309
+    },
+    {
+      "id": "mtmtavu5c500",
+      "title": "平淡文案情绪化改写",
+      "content": "改写平淡文案，增加情绪共鸣、痛点冲击，提升用户代入感和互动率。",
+      "category": "写作",
+      "tags": [
+        "情绪",
+        "改写"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434310,
+      "updatedAt": 1787796434310
+    },
+    {
+      "id": "mtmtavu5c600",
+      "title": "文案关键词布局优化",
+      "content": "优化文案关键词布局，自然植入行业核心词，提升平台搜索曝光流量。",
+      "category": "写作",
+      "tags": [
+        "关键词",
+        "SEO"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434311,
+      "updatedAt": 1787796434311
+    },
+    {
+      "id": "mtmtavu5c700",
+      "title": "文案多版本生成",
+      "content": "针对【主题】生成 3 版不同风格文案，一版正式、一版轻松通俗、一版简短精炼。",
+      "category": "写作",
+      "tags": [
+        "文案",
+        "多版本"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434312,
+      "updatedAt": 1787796434312
+    },
+    {
+      "id": "mtmtavu5c800",
+      "title": "文案拔高格局",
+      "content": "拔高文案格局，优化表述质感、提升专业度，适配品牌官宣、行业分享场景。",
+      "category": "写作",
+      "tags": [
+        "拔高",
+        "品牌"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434313,
+      "updatedAt": 1787796434313
+    },
+    {
+      "id": "mtmtavu5c900",
+      "title": "文案逻辑梳理优化",
+      "content": "梳理文案逻辑，优化段落递进关系，解决内容杂乱、重点模糊、逻辑断层问题。",
+      "category": "写作",
+      "tags": [
+        "逻辑",
+        "优化"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434314,
+      "updatedAt": 1787796434314
+    },
+    {
+      "id": "mtmtavu5ca00",
+      "title": "文章扩写与精简",
+      "content": "把下面文本进行扩写，补充细节论据；保证逻辑连贯。【粘贴原文】精简版本提示词：压缩下面文本，保留全部核心信息，篇幅缩减至原来一半。【粘贴原文】",
+      "category": "写作",
+      "tags": [
+        "改写",
+        "扩写",
+        "精简"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434315,
+      "updatedAt": 1787796434315
+    },
+    {
+      "id": "mtmtavu5cb00",
+      "title": "新手入门教程",
+      "content": "生成新手入门教程，从零开始分步讲解，步骤清晰、通俗易懂、落地性强。",
+      "category": "写作",
+      "tags": [
+        "教程",
+        "入门"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434316,
+      "updatedAt": 1787796434316
+    },
+    {
+      "id": "mtmtavu5cc00",
+      "title": "朋友圈高级质感文案",
+      "content": "生成朋友圈高级质感文案，简约干净、不浮夸，适配日常分享、工作感悟、生活记录。",
+      "category": "写作",
+      "tags": [
+        "朋友圈"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434317,
+      "updatedAt": 1787796434317
+    },
+    {
+      "id": "mtmtavu5cd00",
+      "title": "活动宣传文案",
+      "content": "生成活动宣传文案，突出活动福利、参与方式、截止时间，有吸引力、促进行动。",
+      "category": "写作",
+      "tags": [
+        "活动",
+        "宣传"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434318,
+      "updatedAt": 1787796434318
+    },
+    {
+      "id": "mtmtavu5ce00",
+      "title": "爆款笔记拆解分析",
+      "content": "拆解同赛道爆款笔记，分析它的标题逻辑、结构框架、痛点切入点、互动亮点，输出可复用模板。",
+      "category": "写作",
+      "tags": [
+        "拆解",
+        "爆款"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434319,
+      "updatedAt": 1787796434319
+    },
+    {
+      "id": "mtmtavu5cf00",
+      "title": "现有笔记文案优化",
+      "content": "优化现有笔记文案，降低广告感、提升真实体验感，精简冗余内容，优化段落节奏，提升完读率和收藏率。",
+      "category": "写作",
+      "tags": [
+        "笔记",
+        "优化"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434320,
+      "updatedAt": 1787796434320
+    },
+    {
+      "id": "mtmtavu5cg00",
+      "title": "短视频口播文案",
+      "content": "帮我写短视频口播文案，节奏轻快、口语自然、痛点前置，时长控制60秒，适合真人出镜。",
+      "category": "写作",
+      "tags": [
+        "短视频",
+        "口播"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434321,
+      "updatedAt": 1787796434321
+    },
+    {
+      "id": "mtmtavu5ch00",
+      "title": "短视频脚本撰写",
+      "content": "围绕【主题】生成短视频口播脚本，时长控制在 60-90 秒，包含开场引入、主体讲解、结尾总结，语言口语化。",
+      "category": "写作",
+      "tags": [
+        "短视频",
+        "脚本",
+        "口播"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434322,
+      "updatedAt": 1787796434322
+    },
+    {
+      "id": "mtmtavu5ci00",
+      "title": "行业热点资讯简报",
+      "content": "整理行业热点资讯，精简成每日短简报，适合社群分享、日常发稿。",
+      "category": "写作",
+      "tags": [
+        "热点",
+        "简报"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434323,
+      "updatedAt": 1787796434323
+    },
+    {
+      "id": "mtmtavu5cj00",
+      "title": "避坑指南类笔记",
+      "content": "生成避坑指南类笔记，梳理行业常见误区、新手踩坑点、正确做法，实用性拉满，提升收藏转发。",
+      "category": "写作",
+      "tags": [
+        "避坑"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434324,
+      "updatedAt": 1787796434324
+    },
+    {
+      "id": "mtmtavu5ck00",
+      "title": "客户对接台账",
+      "content": "每月自动整理客户对接记录，汇总沟通内容、跟进进度、待办事项，生成客户台账。",
+      "category": "自动化",
+      "tags": [
+        "客户",
+        "台账"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434325,
+      "updatedAt": 1787796434325
+    },
+    {
+      "id": "mtmtavu5cl00",
+      "title": "小红书文案批量初稿",
+      "content": "每周自动生成5组差异化小红书文案初稿，规整成文档存档，供我二次优化发布。",
+      "category": "自动化",
+      "tags": [
+        "小红书",
+        "批量"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434326,
+      "updatedAt": 1787796434326
+    },
+    {
+      "id": "mtmtavu5cm00",
+      "title": "工作文档批量规整",
+      "content": "定时批量规整工作文档，统一排版、分类归档、重命名，保持文件体系整洁规范。",
+      "category": "自动化",
+      "tags": [
+        "文档",
+        "归档"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434327,
+      "updatedAt": 1787796434327
+    },
+    {
+      "id": "mtmtavu5cn00",
+      "title": "文件夹自动清理归档",
+      "content": "定时清理指定文件夹冗余文件，分类归档有效文档，删除无效垃圾文件，规整文件目录。",
+      "category": "自动化",
+      "tags": [
+        "清理",
+        "归档"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434328,
+      "updatedAt": 1787796434328
+    },
+    {
+      "id": "mtmtavu5co00",
+      "title": "月度总结与数据报表",
+      "content": "每月最后一天，自动汇总本月工作数据，生成月度总结+数据报表，梳理工作成果与问题。",
+      "category": "自动化",
+      "tags": [
+        "月度",
+        "报表"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434329,
+      "updatedAt": 1787796434329
+    },
+    {
+      "id": "mtmtavu5cp00",
+      "title": "每周复盘自动生成",
+      "content": "每周五17点，自动读取本周工作素材，生成标准化周度复盘文档，规整排版、自动归档。",
+      "category": "自动化",
+      "tags": [
+        "周报",
+        "复盘",
+        "定时"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434330,
+      "updatedAt": 1787796434330
+    },
+    {
+      "id": "mtmtavu5cq00",
+      "title": "每周待办优先级梳理",
+      "content": "每周梳理待办工作清单，按优先级排序，标注紧急程度、完成节点，输出工作计划表。",
+      "category": "自动化",
+      "tags": [
+        "待办",
+        "优先级"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434331,
+      "updatedAt": 1787796434331
+    },
+    {
+      "id": "mtmtavu5cr00",
+      "title": "每日工作日志",
+      "content": "每日下午6点，自动汇总当日工作内容，梳理工作成果、待办事项，生成每日工作日志存档。",
+      "category": "自动化",
+      "tags": [
+        "每日",
+        "日志"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434332,
+      "updatedAt": 1787796434332
+    },
+    {
+      "id": "mtmtavu5cs00",
+      "title": "每日行业热点简报",
+      "content": "每日早上8点，抓取【行业】最新热点资讯，整理3条核心干货，生成简报文档，自动保存到对应文件夹。",
+      "category": "自动化",
+      "tags": [
+        "定时",
+        "热点",
+        "简报"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434333,
+      "updatedAt": 1787796434333
+    },
+    {
+      "id": "mtmtavu5ct00",
+      "title": "项目文件更新日志",
+      "content": "每日定时检查项目文件更新，同步最新内容，生成文件更新日志，记录变动信息。",
+      "category": "自动化",
+      "tags": [
+        "文件",
+        "日志"
+      ],
+      "favorite": false,
+      "createdAt": 1787796434334,
+      "updatedAt": 1787796434334
     }
   ]
 }
