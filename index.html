@@ -7,20 +7,20 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 <style>
   :root {
-    --bg: #0d1117;
-    --panel: #161b22;
-    --border: #30363d;
-    --text: #e6edf3;
-    --muted: #8b949e;
-    --accent: #58a6ff;
-    --accent-2: #bc8cff;
-    --green: #3fb950;
-    --red: #f85149;
+    --bg: #f5f7fa;
+    --panel: #ffffff;
+    --border: #dfe3ea;
+    --text: #1f2430;
+    --muted: #6b7280;
+    --accent: #2563eb;
+    --accent-2: #7c3aed;
+    --green: #16a34a;
+    --red: #dc2626;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
-    background: radial-gradient(1000px 500px at 85% -10%, rgba(124,108,240,.09), transparent), var(--bg);
+    background: radial-gradient(1000px 500px at 85% -10%, rgba(124,108,240,.05), transparent), var(--bg);
     color: var(--text);
     min-height: 100vh;
   }
@@ -29,7 +29,7 @@
 
   header {
     position: sticky; top: 0; z-index: 10;
-    background: rgba(13,17,23,.88);
+    background: rgba(255,255,255,.92);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
     padding: 14px 20px;
@@ -37,7 +37,7 @@
   }
   .logo {
     font-size: 20px; font-weight: 700; white-space: nowrap;
-    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
     -webkit-background-clip: text; background-clip: text; color: transparent;
   }
   .search-box { flex: 1; min-width: 200px; position: relative; }
@@ -73,13 +73,6 @@
 
   main { max-width: 1100px; margin: 0 auto; padding: 20px; }
 
-  .banner {
-    padding: 10px 14px; border-radius: 10px; font-size: 13px; margin-bottom: 14px;
-    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
-  }
-  .banner.warn { background: rgba(210,153,34,.12); border: 1px solid rgba(210,153,34,.4); color: #e3b341; }
-  .banner .link { color: var(--accent); cursor: pointer; text-decoration: underline; }
-
   .stats {
     display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px;
     color: var(--muted); font-size: 13px; align-items: center;
@@ -93,7 +86,7 @@
   .chip:hover { border-color: var(--accent); }
   .chip.active {
     border-color: var(--accent); color: var(--accent);
-    background: rgba(88,166,255,.1);
+    background: rgba(37,99,235,.08);
   }
 
   .grid {
@@ -107,7 +100,7 @@
     display: flex; flex-direction: column; gap: 10px;
     transition: .15s;
   }
-  .card:hover { border-color: #484f58; transform: translateY(-2px); }
+  .card:hover { border-color: #c9d2e0; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(15,23,42,.06); }
   .card .title-row { display: flex; align-items: flex-start; gap: 8px; }
   .card h3 { font-size: 15px; flex: 1; word-break: break-all; cursor: pointer; }
   .card h3:hover { color: var(--accent); }
@@ -130,13 +123,13 @@
   }
   .tag {
     padding: 2px 8px; border-radius: 10px;
-    background: rgba(188,140,255,.12); color: var(--accent-2);
-    border: 1px solid rgba(188,140,255,.25);
+    background: rgba(124,58,237,.08); color: var(--accent-2);
+    border: 1px solid rgba(124,58,237,.22);
   }
   .cat {
     padding: 2px 8px; border-radius: 10px;
-    background: rgba(88,166,255,.12); color: var(--accent);
-    border: 1px solid rgba(88,166,255,.25);
+    background: rgba(37,99,235,.08); color: var(--accent);
+    border: 1px solid rgba(37,99,235,.22);
   }
   .card .actions { display: flex; gap: 8px; margin-top: auto; }
   .card .actions .btn { padding: 5px 12px; font-size: 12px; flex: 1; }
@@ -149,7 +142,7 @@
   .loading { text-align: center; color: var(--muted); padding: 60px; grid-column: 1/-1; }
 
   .modal-mask {
-    position: fixed; inset: 0; background: rgba(0,0,0,.6);
+    position: fixed; inset: 0; background: rgba(15,23,42,.45);
     display: none; align-items: center; justify-content: center;
     z-index: 100; padding: 20px;
   }
@@ -187,9 +180,10 @@
 
   #toast {
     position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(80px);
-    background: var(--panel); border: 1px solid var(--green); color: var(--green);
+    background: #ffffff; border: 1px solid var(--green); color: #15803d;
     padding: 10px 20px; border-radius: 10px; font-size: 14px;
     transition: .3s; z-index: 200; opacity: 0;
+    box-shadow: 0 8px 24px rgba(15,23,42,.12);
   }
   #toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
   #toast.err { border-color: var(--red); color: var(--red); }
@@ -219,9 +213,7 @@
 </header>
 
 <main>
-  <div class="banner warn" id="tokenBanner" hidden>
-    ⚠️ 当前为只读模式：可浏览全部内容；添加/编辑/删除需要写入令牌。点 <span class="link" onclick="openTokenModal()">这里配置令牌</span>（只保存在本浏览器）。
-  </div>
+  
 
   <div class="stats" id="stats"></div>
   <div class="grid" id="grid">
@@ -549,7 +541,7 @@ function render() {
     return;
   }
   grid.innerHTML = list.map(p => cardHTML(p)).join('');
-  $('tokenBanner').hidden = !!getToken();
+
 }
 
 function renderStats() {
