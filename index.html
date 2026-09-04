@@ -220,7 +220,7 @@
 
 <main>
   <div class="banner warn" id="tokenBanner" hidden>
-    ⚠️ 当前为只读模式（未配置写入令牌），可浏览但无法添加/编辑。点 <span class="link" onclick="openTokenModal()">这里配置令牌</span>。
+    ⚠️ 当前为只读模式：可浏览全部内容；添加/编辑/删除需要写入令牌。点 <span class="link" onclick="openTokenModal()">这里配置令牌</span>（只保存在本浏览器）。
   </div>
 
   <div class="stats" id="stats"></div>
@@ -340,17 +340,36 @@ async function api(path, opts = {}) {
 }
 
 // ---- 数据加载 ----
+// 主通道：raw.githubusercontent.com（不走 API 限额，免认证）；备用：Contents API（带 token 则认证）
+async function loadRaw() {
+  const r = await fetch(`https://raw.githubusercontent.com/${REPO}/${BRANCH}/${FILE}?_=${Date.now()}`);
+  if (!r.ok) { const err = new Error('raw ' + r.status); err.status = r.status; throw err; }
+  return JSON.parse(await r.text());
+}
+
+async function loadViaApi() {
+  const r = await api(`/repos/${REPO}/contents/${FILE}?ref=${BRANCH}&_=${Date.now()}`);
+  if (r.status === 404) return { prompts: [], sha: null };
+  if (!r.ok) { const err = new Error('GitHub ' + r.status); err.status = r.status; throw err; }
+  const j = await r.json();
+  fileSha = j.sha;
+  return JSON.parse(b64ToUtf8(j.content));
+}
+
 async function load() {
   try {
-    const r = await api(`/repos/${REPO}/contents/${FILE}?ref=${BRANCH}&_=${Date.now()}`);
-    if (r.status === 404) { prompts = []; fileSha = null; render(); return; }
-    if (!r.ok) throw new Error('GitHub ' + r.status);
-    const j = await r.json();
-    fileSha = j.sha;
-    prompts = JSON.parse(b64ToUtf8(j.content)).prompts || [];
+    let data;
+    try {
+      data = await loadRaw();
+    } catch (rawErr) {
+      data = await loadViaApi();
+    }
+    prompts = data.prompts || [];
     render();
   } catch (e) {
-    $('grid').innerHTML = `<div class="empty"><div class="big">⚠️</div>加载失败：${esc(e.message)}</div>`;
+    const hint = (String(e.message).includes('403') || String(e.message).includes('429'))
+      ? '（API 限流，点右上角 ⚙️ 配置令牌后不再受限）' : '';
+    $('grid').innerHTML = `<div class="empty"><div class="big">⚠️</div>加载失败：${esc(e.message)}${hint}<br><span class="hint">可点 <a href="#" onclick="load();return false;">重试</a></span></div>`;
   }
 }
 
