@@ -36,18 +36,6 @@
       "updatedAt": 1787796042147
     },
     {
-      "id": "mtavljbosuwo",
-      "title": "测试 Prompt",
-      "content": "你是一个专业的代码审查助手。",
-      "category": "编程",
-      "tags": [
-        "测试"
-      ],
-      "favorite": false,
-      "createdAt": 1787796032532,
-      "updatedAt": 1787796032532
-    },
-    {
       "id": "mtmtavu59b00",
       "title": "PPT大纲生成",
       "content": "围绕【主题名称】生成一份 PPT 完整大纲，划分 8-12 页内容，每一页标注页面主题与核心要点。",
