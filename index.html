@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prompt 库</title>
+<title>⚡ Prompt 库</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 <style>
   :root {
     --bg: #0d1117;
@@ -15,30 +16,29 @@
     --accent-2: #bc8cff;
     --green: #3fb950;
     --red: #f85149;
-    --yellow: #d29922;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
-    background: var(--bg);
+    background: radial-gradient(1000px 500px at 85% -10%, rgba(124,108,240,.09), transparent), var(--bg);
     color: var(--text);
     min-height: 100vh;
   }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
 
-  /* 顶栏 */
   header {
     position: sticky; top: 0; z-index: 10;
-    background: rgba(13,17,23,.85);
+    background: rgba(13,17,23,.88);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
     padding: 14px 20px;
     display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
   }
   .logo {
-    font-size: 20px; font-weight: 700;
+    font-size: 20px; font-weight: 700; white-space: nowrap;
     background: linear-gradient(135deg, var(--accent), var(--accent-2));
     -webkit-background-clip: text; background-clip: text; color: transparent;
-    white-space: nowrap;
   }
   .search-box { flex: 1; min-width: 200px; position: relative; }
   .search-box input {
@@ -62,14 +62,29 @@
     border-color: #2ea043; color: #fff; font-weight: 600;
   }
   .btn.primary:hover { background: linear-gradient(135deg, #2ea043, #3fb950); }
+  .btn.primary:disabled { opacity: .55; cursor: default; }
+  .btn.danger:hover { border-color: var(--red); color: var(--red); }
+  .icon-btn {
+    width: 36px; height: 36px; border-radius: 8px;
+    border: 1px solid var(--border); background: var(--panel);
+    font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .icon-btn:hover { border-color: var(--accent); }
 
-  /* 主体 */
   main { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+  .banner {
+    padding: 10px 14px; border-radius: 10px; font-size: 13px; margin-bottom: 14px;
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  }
+  .banner.warn { background: rgba(210,153,34,.12); border: 1px solid rgba(210,153,34,.4); color: #e3b341; }
+  .banner .link { color: var(--accent); cursor: pointer; text-decoration: underline; }
 
   .stats {
     display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px;
     color: var(--muted); font-size: 13px; align-items: center;
   }
+  .stats b { color: var(--text); }
   .chip {
     padding: 4px 10px; border-radius: 20px;
     background: var(--panel); border: 1px solid var(--border);
@@ -81,7 +96,6 @@
     background: rgba(88,166,255,.1);
   }
 
-  /* 卡片网格 */
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -97,14 +111,14 @@
   .card .title-row { display: flex; align-items: flex-start; gap: 8px; }
   .card h3 { font-size: 15px; flex: 1; word-break: break-all; cursor: pointer; }
   .card h3:hover { color: var(--accent); }
-  .star { cursor: pointer; font-size: 16px; user-select: none; }
+  .star { cursor: pointer; font-size: 16px; user-select: none; background: none; border: none; color: var(--text); }
   .card .content-preview {
     font-size: 13px; color: var(--muted); line-height: 1.6;
     font-family: "Cascadia Code", Consolas, monospace;
     background: var(--bg); border: 1px solid var(--border);
     border-radius: 8px; padding: 10px 12px;
     max-height: 100px; overflow: hidden; position: relative;
-    white-space: pre-wrap; word-break: break-all;
+    white-space: pre-wrap; word-break: break-all; cursor: pointer;
   }
   .card .content-preview::after {
     content: ""; position: absolute; bottom: 0; left: 0; right: 0;
@@ -126,15 +140,14 @@
   }
   .card .actions { display: flex; gap: 8px; margin-top: auto; }
   .card .actions .btn { padding: 5px 12px; font-size: 12px; flex: 1; }
-  .btn.danger:hover { border-color: var(--red); color: var(--red); }
 
   .empty {
     text-align: center; color: var(--muted); padding: 60px 20px;
     grid-column: 1 / -1;
   }
   .empty .big { font-size: 48px; margin-bottom: 12px; }
+  .loading { text-align: center; color: var(--muted); padding: 60px; grid-column: 1/-1; }
 
-  /* 弹窗 */
   .modal-mask {
     position: fixed; inset: 0; background: rgba(0,0,0,.6);
     display: none; align-items: center; justify-content: center;
@@ -149,7 +162,7 @@
   }
   .modal h2 { font-size: 18px; }
   .modal label { font-size: 13px; color: var(--muted); display: block; margin-bottom: 6px; }
-  .modal input[type=text], .modal textarea, .modal select {
+  .modal input[type=text], .modal textarea {
     width: 100%; background: var(--bg); border: 1px solid var(--border);
     border-radius: 8px; color: var(--text); padding: 10px 12px;
     font-size: 14px; outline: none; font-family: inherit;
@@ -159,12 +172,11 @@
     font-family: "Cascadia Code", Consolas, monospace; font-size: 13px;
     line-height: 1.6;
   }
-  .modal input:focus, .modal textarea:focus, .modal select:focus { border-color: var(--accent); }
+  .modal input:focus, .modal textarea:focus { border-color: var(--accent); }
   .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
   .modal .footer { display: flex; gap: 10px; justify-content: flex-end; margin-top: 4px; }
   .hint { font-size: 12px; color: var(--muted); }
 
-  /* 查看弹窗 */
   .view-content {
     background: var(--bg); border: 1px solid var(--border);
     border-radius: 8px; padding: 14px;
@@ -173,7 +185,6 @@
     word-break: break-all; max-height: 55vh; overflow-y: auto;
   }
 
-  /* toast */
   #toast {
     position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(80px);
     background: var(--panel); border: 1px solid var(--green); color: var(--green);
@@ -182,30 +193,6 @@
   }
   #toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
   #toast.err { border-color: var(--red); color: var(--red); }
-
-  /* 登录层 */
-  #loginMask {
-    position: fixed; inset: 0; z-index: 300;
-    background: radial-gradient(ellipse at top, #1a2233 0%, var(--bg) 70%);
-    display: flex; align-items: center; justify-content: center; padding: 20px;
-  }
-  #loginMask.hidden { display: none; }
-  .login-card {
-    background: var(--panel); border: 1px solid var(--border);
-    border-radius: 16px; padding: 32px; width: 100%; max-width: 360px;
-    display: flex; flex-direction: column; gap: 16px; text-align: center;
-  }
-  .login-card .logo { font-size: 28px; justify-content: center; display: flex; }
-  .login-card p { color: var(--muted); font-size: 13px; }
-  .login-card input {
-    width: 100%; padding: 12px 14px; border-radius: 10px;
-    background: var(--bg); border: 1px solid var(--border);
-    color: var(--text); font-size: 16px; outline: none; text-align: center;
-    letter-spacing: 2px;
-  }
-  .login-card input:focus { border-color: var(--accent); }
-
-  .loading { text-align: center; color: var(--muted); padding: 60px; grid-column: 1/-1; }
 
   @media (max-width: 600px) {
     .row2 { grid-template-columns: 1fr; }
@@ -217,9 +204,9 @@
 <body>
 
 <header>
-  <div class="logo">✦ Prompt 库</div>
+  <div class="logo">⚡ Prompt 库</div>
   <div class="search-box">
-    <input id="search" type="text" placeholder="搜索标题 / 内容 / 标签…" />
+    <input id="search" type="text" placeholder="搜索标题 / 内容 / 标签…（Ctrl+K）">
   </div>
   <select id="sortBy" style="padding:8px;border-radius:8px;background:var(--panel);border:1px solid var(--border);color:var(--text);outline:none;font-size:13px;">
     <option value="new">最新</option>
@@ -227,10 +214,15 @@
     <option value="title">标题</option>
     <option value="fav">收藏优先</option>
   </select>
-  <button class="btn primary" onclick="openEditor()">＋ 添加 Prompt</button>
+  <button class="btn primary" id="btn-add" onclick="openEditor()">＋ 添加</button>
+  <button class="icon-btn" id="settingsBtn" title="设置写入令牌">⚙️</button>
 </header>
 
 <main>
+  <div class="banner warn" id="tokenBanner" hidden>
+    ⚠️ 当前为只读模式（未配置写入令牌），可浏览但无法添加/编辑。点 <span class="link" onclick="openTokenModal()">这里配置令牌</span>。
+  </div>
+
   <div class="stats" id="stats"></div>
   <div class="grid" id="grid">
     <div class="loading">加载中…</div>
@@ -243,7 +235,7 @@
     <h2 id="editTitle">添加 Prompt</h2>
     <div>
       <label>标题 *</label>
-      <input type="text" id="f_title" placeholder="例如：代码审查专家" maxlength="200">
+      <input type="text" id="f_title" placeholder="给这个 Prompt 起个名字" maxlength="200">
     </div>
     <div class="row2">
       <div>
@@ -260,8 +252,9 @@
       <label>Prompt 内容 *</label>
       <textarea id="f_content" placeholder="把 Prompt 粘贴到这里…"></textarea>
     </div>
-    <div class="hint">💾 保存后会自动同步到 GitHub 仓库 eastseao/prompt</div>
+    <div class="hint">💾 保存后会自动提交到 GitHub 仓库 eastseao/prompt 的 prompts.json</div>
     <div class="footer">
+      <span class="hint" style="margin-right:auto;align-self:center;">Ctrl+Enter 快速保存</span>
       <button class="btn" onclick="closeEditor()">取消</button>
       <button class="btn primary" id="saveBtn" onclick="savePrompt()">保存</button>
     </div>
@@ -285,147 +278,111 @@
   </div>
 </div>
 
-<div id="toast"></div>
-
-<!-- 登录层 -->
-<div id="loginMask">
-  <div class="login-card">
-    <div class="logo">✦ Prompt 库</div>
-    <p>私有库，请输入访问密码</p>
-    <input type="password" id="loginPw" placeholder="访问密码" autocomplete="current-password">
-    <button class="btn primary" id="loginBtn" onclick="doLogin()" style="padding:12px;font-size:15px;">进入</button>
-    <p class="hint">🔒 密码错误 5 次将锁定 10 分钟</p>
+<!-- Token 设置弹层 -->
+<div class="modal-mask" id="tokenMask">
+  <div class="modal" style="max-width:480px;">
+    <h2>写入令牌设置</h2>
+    <p class="hint">添加/编辑/删除需要 GitHub 写入权限。令牌只保存在<b>当前浏览器</b>里，不会上传到任何服务器。</p>
+    <div>
+      <label>GitHub Token（推荐使用仅限本仓库的 Fine-grained Token）</label>
+      <input type="password" id="tokenInput" placeholder="github_pat_…" autocomplete="off">
+    </div>
+    <ol class="hint" style="padding-left:18px;line-height:1.9;">
+      <li>打开 <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">github.com/settings/personal-access-tokens/new</a></li>
+      <li>Repository access 选 <b>Only select repositories</b> → <b>prompt</b></li>
+      <li>Permissions → Repository permissions → <b>Contents</b> 设为 <b>Read and write</b></li>
+      <li>生成后粘贴到上方，点保存</li>
+    </ol>
+    <div class="footer">
+      <button class="btn" onclick="clearToken()">清除令牌</button>
+      <button class="btn primary" onclick="saveToken()">保存</button>
+    </div>
   </div>
 </div>
 
+<div id="toast"></div>
+
 <script>
+const REPO = 'eastseao/prompt';
+const BRANCH = 'main';
+const FILE = 'prompts.json';
+const TOKEN_KEY = '***';
+
 let prompts = [];
+let fileSha = null;
 let currentViewId = null;
 let editingId = null;
 
 const $ = id => document.getElementById(id);
 
-// ---- 登录 ----
-async function doLogin() {
-  const pw = $('loginPw').value;
-  if (!pw) return toast('请输入密码', true);
-  $('loginBtn').disabled = true;
-  $('loginBtn').textContent = '验证中…';
-  try {
-    const r = await fetch('/api/login', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ password: pw }),
-    });
-    const data = await r.json();
-    if (!r.ok) throw new Error(data.error || '登录失败');
-    enterApp();
-  } catch (e) {
-    toast(e.message, true);
-    $('loginPw').value = '';
-    $('loginPw').focus();
-  } finally {
-    $('loginBtn').disabled = false;
-    $('loginBtn').textContent = '进入';
-  }
+function getToken() { return localStorage.getItem(TOKEN_KEY) || ''; }
+function b64ToUtf8(b64) {
+  const bin = atob(b64.replace(/\s/g, ''));
+  const u = Uint8Array.from(bin, c => c.charCodeAt(0));
+  return new TextDecoder().decode(u);
+}
+function utf8ToB64(s) {
+  const b = new TextEncoder().encode(s);
+  let bin = '';
+  b.forEach(x => bin += String.fromCharCode(x));
+  return btoa(bin);
 }
 
-function enterApp() {
-  $('loginMask').classList.add('hidden');
-  load();
+async function api(path, opts = {}) {
+  const headers = {
+    'Accept': 'application/vnd.github+json',
+    'X-GitHub-Api-Version': '2022-11-28',
+    ...(opts.headers || {})
+  };
+  const token = getToken();
+  if (token) headers['Authorization'] = 'Bearer ' + token;
+  return fetch(`https://api.github.com${path}`, { ...opts, headers });
 }
 
-async function checkAuth() {
-  try {
-    const r = await fetch('/api/prompts');
-    if (r.ok) { enterApp(); return; }
-    if (r.status === 401) {
-      $('loginMask').classList.remove('hidden');
-      setTimeout(() => $('loginPw').focus(), 50);
-    }
-  } catch (e) {
-    $('grid').innerHTML = `<div class="empty"><div class="big">⚠️</div>连接失败</div>`;
-  }
-}
-
+// ---- 数据加载 ----
 async function load() {
   try {
-    const r = await fetch('/api/prompts');
-    if (r.status === 401) {
-      $('loginMask').classList.remove('hidden');
-      return;
-    }
-    const data = await r.json();
-    prompts = data.prompts || [];
+    const r = await api(`/repos/${REPO}/contents/${FILE}?ref=${BRANCH}&_=${Date.now()}`);
+    if (r.status === 404) { prompts = []; fileSha = null; render(); return; }
+    if (!r.ok) throw new Error('GitHub ' + r.status);
+    const j = await r.json();
+    fileSha = j.sha;
+    prompts = JSON.parse(b64ToUtf8(j.content)).prompts || [];
     render();
   } catch (e) {
     $('grid').innerHTML = `<div class="empty"><div class="big">⚠️</div>加载失败：${esc(e.message)}</div>`;
   }
 }
 
-function render() {
-  const q = $('search').value.trim().toLowerCase();
-  const sort = $('sortBy').value;
-  let list = prompts.filter(p =>
-    !q || p.title.toLowerCase().includes(q)
-    || p.content.toLowerCase().includes(q)
-    || (p.tags || []).some(t => t.toLowerCase().includes(q))
-    || (p.category || '').toLowerCase().includes(q)
-  );
-  if (sort === 'new') list.sort((a, b) => b.createdAt - a.createdAt);
-  else if (sort === 'old') list.sort((a, b) => a.createdAt - b.createdAt);
-  else if (sort === 'title') list.sort((a, b) => a.title.localeCompare(b.title, 'zh'));
-  else if (sort === 'fav') list.sort((a, b) => (b.favorite - a.favorite) || (b.createdAt - a.createdAt));
-
-  renderStats();
-  const grid = $('grid');
-  if (!list.length) {
-    grid.innerHTML = `<div class="empty"><div class="big">✨</div>${q ? '没有匹配的 Prompt' : '还没有 Prompt，点击右上角「＋ 添加 Prompt」开始吧'}</div>`;
-    return;
-  }
-  grid.innerHTML = list.map(p => cardHTML(p)).join('');
+// 读取最新数据 + sha（每次写操作前调用，避免覆盖他人修改）
+async function fetchLatest() {
+  const r = await api(`/repos/${REPO}/contents/${FILE}?ref=${BRANCH}`);
+  if (r.status === 404) return { prompts: [], sha: null };
+  if (!r.ok) throw new Error('GitHub ' + r.status);
+  const j = await r.json();
+  return { data: JSON.parse(b64ToUtf8(j.content)), sha: j.sha };
 }
 
-function renderStats() {
-  const cats = {};
-  prompts.forEach(p => { const c = p.category || '未分类'; cats[c] = (cats[c] || 0) + 1; });
-  const total = prompts.length;
-  const fav = prompts.filter(p => p.favorite).length;
-  let html = `<span>共 <b style="color:var(--text)">${total}</b> 条 · 收藏 ${fav} 条</span>`;
-  if (total) {
-    html += Object.entries(cats).sort((a, b) => b[1] - a[1]).slice(0, 8)
-      .map(([c, n]) => `<span class="chip" onclick="filterCat('${esc(c)}')">${esc(c)} ${n}</span>`).join('');
-  }
-  $('stats').innerHTML = html;
-  // datalist
-  $('catList').innerHTML = Object.keys(cats).map(c => `<option value="${esc(c)}">`).join('');
+async function putFile(data, sha, message) {
+  const put = await api(`/repos/${REPO}/contents/${FILE}`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      message,
+      content: utf8ToB64(JSON.stringify(data, null, 2)),
+      branch: BRANCH,
+      ...(sha ? { sha } : {})
+    })
+  });
+  if (!put.ok) throw new Error('GitHub ' + put.status);
+  const pj = await put.json();
+  fileSha = pj.content.sha;
+  return pj;
 }
 
-function cardHTML(p) {
-  const preview = p.content.length > 300 ? p.content.slice(0, 300) + '…' : p.content;
-  const date = new Date(p.createdAt).toLocaleDateString('zh-CN');
-  return `
-  <div class="card">
-    <div class="title-row">
-      <h3 onclick="viewPrompt('${p.id}')">${esc(p.title)}</h3>
-      <span class="star" onclick="toggleFav('${p.id}')">${p.favorite ? '★' : '☆'}</span>
-    </div>
-    <div class="content-preview" onclick="viewPrompt('${p.id}')">${esc(preview)}</div>
-    <div class="meta">
-      ${p.category ? `<span class="cat">${esc(p.category)}</span>` : ''}
-      ${(p.tags || []).map(t => `<span class="tag">${esc(t)}</span>`).join('')}
-      <span style="margin-left:auto">${date}</span>
-    </div>
-    <div class="actions">
-      <button class="btn" onclick="copyPrompt('${p.id}')">📋 复制</button>
-      <button class="btn" onclick="editPrompt('${p.id}')">✏️ 编辑</button>
-      <button class="btn danger" onclick="delPrompt('${p.id}')">🗑</button>
-    </div>
-  </div>`;
-}
-
-// ---- 编辑 ----
+// ---- 添加/编辑 ----
 function openEditor() {
+  if (!getToken()) { openTokenModal(); toast('请先配置写入令牌', true); return; }
   editingId = null;
   $('editTitle').textContent = '添加 Prompt';
   $('f_title').value = ''; $('f_category').value = ''; $('f_tags').value = ''; $('f_content').value = '';
@@ -434,6 +391,7 @@ function openEditor() {
 }
 
 function editPrompt(id) {
+  if (!getToken()) { openTokenModal(); toast('请先配置写入令牌', true); return; }
   const p = prompts.find(x => x.id === id);
   if (!p) return;
   editingId = id;
@@ -447,37 +405,48 @@ function editPrompt(id) {
 }
 
 function editFromView() { editPrompt(currentViewId); }
-
 function closeEditor() { $('editMask').classList.remove('show'); }
 
 async function savePrompt() {
   const title = $('f_title').value.trim();
   const content = $('f_content').value.trim();
   if (!title || !content) return toast('标题和内容必填', true);
-  const body = {
-    title, content,
-    category: $('f_category').value.trim(),
-    tags: $('f_tags').value.split(/[,，]/).map(s => s.trim()).filter(Boolean),
-  };
-  $('saveBtn').disabled = true;
-  $('saveBtn').textContent = '保存中…';
+  const btn = $('saveBtn');
+  btn.disabled = true; btn.textContent = '保存中…';
   try {
-    const url = editingId ? `/api/prompts/${editingId}` : '/api/prompts';
-    const r = await fetch(url, {
-      method: editingId ? 'PUT' : 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
-    });
-    const data = await r.json();
-    if (!r.ok) throw new Error(data.error || '保存失败');
+    const latest = await fetchLatest();
+    const list = latest.data.prompts || [];
+    const now = Date.now();
+    let saved;
+    if (editingId) {
+      const target = list.find(x => x.id === editingId);
+      if (!target) throw new Error('原记录不存在（可能已被其他端修改），请刷新');
+      target.title = title;
+      target.content = content;
+      target.category = $('f_category').value.trim();
+      target.tags = parseTags($('f_tags').value);
+      target.updatedAt = now;
+      saved = target;
+    } else {
+      saved = {
+        id: now.toString(36) + Math.random().toString(36).slice(2, 6),
+        title, content,
+        category: $('f_category').value.trim(),
+        tags: parseTags($('f_tags').value),
+        favorite: false,
+        createdAt: now, updatedAt: now,
+      };
+      list.unshift(saved);
+    }
+    await putFile({ prompts: list }, latest.sha, (editingId ? '编辑 Prompt：' : '添加 Prompt：') + title);
+    prompts = list;
     closeEditor();
     toast('✅ 已保存并同步到 GitHub');
-    load();
+    render();
   } catch (e) {
     toast(e.message, true);
   } finally {
-    $('saveBtn').disabled = false;
-    $('saveBtn').textContent = '保存';
+    btn.disabled = false; btn.textContent = '保存';
   }
 }
 
@@ -499,29 +468,35 @@ function closeView() { $('viewMask').classList.remove('show'); }
 function toggleFavView() { toggleFav(currentViewId, true); }
 
 async function toggleFav(id, fromView) {
+  if (!getToken()) { openTokenModal(); toast('请先配置写入令牌', true); return; }
   const p = prompts.find(x => x.id === id);
   if (!p) return;
   p.favorite = !p.favorite;
   try {
-    await fetch(`/api/prompts/${id}`, {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ favorite: p.favorite }),
-    });
+    const latest = await fetchLatest();
+    const target = (latest.data.prompts || []).find(x => x.id === id);
+    if (target) target.favorite = p.favorite;
+    await putFile(latest.data, latest.sha, (p.favorite ? '收藏 ⭐：' : '取消收藏：') + p.title);
     if (fromView) $('v_star').textContent = p.favorite ? '★' : '☆';
     render();
-  } catch (e) { toast(e.message, true); }
+  } catch (e) {
+    p.favorite = !p.favorite;
+    toast(e.message, true);
+  }
 }
 
 async function delPrompt(id) {
+  if (!getToken()) { openTokenModal(); toast('请先配置写入令牌', true); return; }
   const p = prompts.find(x => x.id === id);
   if (!p) return;
   if (!confirm(`确定删除「${p.title}」吗？`)) return;
   try {
-    const r = await fetch(`/api/prompts/${id}`, { method: 'DELETE' });
-    if (!r.ok) throw new Error('删除失败');
+    const latest = await fetchLatest();
+    latest.data.prompts = (latest.data.prompts || []).filter(x => x.id !== id);
+    await putFile(latest.data, latest.sha, '删除 Prompt：' + p.title);
+    prompts = latest.data.prompts;
     toast('🗑 已删除');
-    load();
+    render();
   } catch (e) { toast(e.message, true); }
 }
 
@@ -531,12 +506,76 @@ async function copyPrompt(id) {
   try { await navigator.clipboard.writeText(p.content); toast('📋 已复制到剪贴板'); }
   catch { toast('复制失败', true); }
 }
-
 function copyView() { copyPrompt(currentViewId); }
 
+// ---- 渲染 ----
+function render() {
+  const sort = $('sortBy').value;
+  let list = [...prompts];
+  if (sort === 'new') list.sort((a, b) => b.createdAt - a.createdAt);
+  else if (sort === 'old') list.sort((a, b) => a.createdAt - b.createdAt);
+  else if (sort === 'title') list.sort((a, b) => a.title.localeCompare(b.title, 'zh'));
+  else if (sort === 'fav') list.sort((a, b) => (b.favorite - a.favorite) || (b.createdAt - a.createdAt));
+
+  renderStats();
+  const q = $('search').value.trim().toLowerCase();
+  if (q) list = list.filter(p =>
+    p.title.toLowerCase().includes(q) || p.content.toLowerCase().includes(q) ||
+    (p.tags || []).some(t => t.toLowerCase().includes(q)) ||
+    (p.category || '').toLowerCase().includes(q));
+
+  const grid = $('grid');
+  if (!list.length) {
+    grid.innerHTML = `<div class="empty"><div class="big">✨</div>${q ? '没有匹配的 Prompt' : '还没有 Prompt，点右上角「＋ 添加」写下第一条'}</div>`;
+    return;
+  }
+  grid.innerHTML = list.map(p => cardHTML(p)).join('');
+  $('tokenBanner').hidden = !!getToken();
+}
+
+function renderStats() {
+  const cats = {};
+  prompts.forEach(p => { const c = p.category || '未分类'; cats[c] = (cats[c] || 0) + 1; });
+  const fav = prompts.filter(p => p.favorite).length;
+  let html = `<span>共 <b>${prompts.length}</b> 条 · 收藏 ${fav} 条</span>`;
+  if (prompts.length) {
+    html += Object.entries(cats).sort((a, b) => b[1] - a[1]).slice(0, 8)
+      .map(([c, n]) => `<span class="chip" onclick="filterCat('${esc(c)}')">${esc(c)} ${n}</span>`).join('');
+  }
+  $('stats').innerHTML = html;
+  $('catList').innerHTML = Object.keys(cats).map(c => `<option value="${esc(c)}">`).join('');
+}
+
+function cardHTML(p) {
+  const preview = p.content.length > 300 ? p.content.slice(0, 300) + '…' : p.content;
+  const date = new Date(p.createdAt).toLocaleDateString('zh-CN');
+  return `
+  <div class="card">
+    <div class="title-row">
+      <h3 onclick="viewPrompt('${p.id}')">${esc(p.title)}</h3>
+      <button class="star" onclick="toggleFav('${p.id}')">${p.favorite ? '★' : '☆'}</button>
+    </div>
+    <div class="content-preview" onclick="viewPrompt('${p.id}')">${esc(preview)}</div>
+    <div class="meta">
+      ${p.category ? `<span class="cat">${esc(p.category)}</span>` : ''}
+      ${(p.tags || []).map(t => `<span class="tag">${esc(t)}</span>`).join('')}
+      <span style="margin-left:auto">${date}</span>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="copyPrompt('${p.id}')">📋 复制</button>
+      <button class="btn" onclick="editPrompt('${p.id}')">✏️ 编辑</button>
+      <button class="btn danger" onclick="delPrompt('${p.id}')">🗑</button>
+    </div>
+  </div>`;
+}
+
 function filterCat(c) {
-  $('search').value = c;
+  $('search').value = c === '未分类' ? '' : c;
   render();
+}
+
+function parseTags(v) {
+  return v.split(/[,，]/).map(s => s.trim()).filter(Boolean);
 }
 
 function esc(s) {
@@ -552,17 +591,42 @@ function toast(msg, isErr) {
   t._timer = setTimeout(() => t.classList.remove('show'), 2500);
 }
 
+// ---- Token 设置 ----
+function openTokenModal() {
+  $('tokenInput').value = getToken();
+  $('tokenMask').classList.add('show');
+  setTimeout(() => $('tokenInput').focus(), 50);
+}
+function closeTokenModal() { $('tokenMask').classList.remove('show'); }
+function saveToken() {
+  const v = $('tokenInput').value.trim();
+  if (v) localStorage.setItem(TOKEN_KEY, v);
+  else localStorage.removeItem(TOKEN_KEY);
+  closeTokenModal();
+  render();
+  toast(v ? '令牌已保存' : '令牌已清除');
+}
+function clearToken() {
+  localStorage.removeItem(TOKEN_KEY);
+  closeTokenModal();
+  render();
+  toast('令牌已清除');
+}
+
+// ---- 事件 ----
 $('search').addEventListener('input', render);
 $('sortBy').addEventListener('change', render);
-$('loginPw').addEventListener('keydown', e => { if (e.key === 'Enter') doLogin(); });
+$('settingsBtn').addEventListener('click', openTokenModal);
+$('tokenMask').addEventListener('click', e => { if (e.target === $('tokenMask')) closeTokenModal(); });
 $('editMask').addEventListener('click', e => { if (e.target === $('editMask')) closeEditor(); });
 $('viewMask').addEventListener('click', e => { if (e.target === $('viewMask')) closeView(); });
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') { closeEditor(); closeView(); }
+  if (e.key === 'Escape') { closeEditor(); closeView(); closeTokenModal(); }
+  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); $('search').focus(); }
   if (e.ctrlKey && e.key === 'Enter' && $('editMask').classList.contains('show')) savePrompt();
 });
 
-checkAuth();
+load();
 </script>
 </body>
 </html>
